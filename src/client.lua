@@ -1,13 +1,12 @@
 -- For support join my discord: https://discord.gg/Z9Mxu72zZ6
-
-local hidden = false
+local vehicle = nil
+local vehClass = nil
+local driver = nil
 
 CreateThread(function()
     Wait(500)
     while true do
         Wait(300)
-        time = getTime()
-        hidden = IsHudHidden()
         vehicle = GetVehiclePedIsIn(ped)
         vehClass = GetVehicleClass(vehicle)
         driver = GetPedInVehicleSeat(vehicle, -1)
