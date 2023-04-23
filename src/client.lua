@@ -7,6 +7,7 @@ CreateThread(function()
     Wait(500)
     while true do
         Wait(300)
+        local ped = PlayerPedId()
         vehicle = GetVehiclePedIsIn(ped)
         vehClass = GetVehicleClass(vehicle)
         driver = GetPedInVehicleSeat(vehicle, -1)
